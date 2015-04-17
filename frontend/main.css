@@ -1,0 +1,35 @@
+svg .line {
+    stroke:#999999;
+    stroke-width:5;
+}
+
+svg .circle {
+    fill:#999999; 
+    stroke:#ffffff; 
+    stroke-width:3;
+}
+
+svg .polygon {
+    fill:#eeeeee;
+    stroke:#999999;
+    stroke-width:1;
+    opacity: 1;
+}
+
+svg .polygon:hover {
+    fill:aliceblue;
+    stroke:#0000ff;
+    stroke-width:1;
+    opacity: 1;
+}
+
+.textBase {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+svg .date {
+    stroke-width:1;
+    stroke:#000000;
+    kerning:1.2;
+}
