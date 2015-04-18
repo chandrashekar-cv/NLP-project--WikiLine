@@ -7,7 +7,7 @@ from lxml import etree
 
 from GlobalModel import *
 from CategoryModel import *
-from preprcess import *
+from preprocess import *
 
 #### CONSTANTS AND OPTIONS DEFINED HERE
 INPUT_FOLDER = ""
@@ -22,8 +22,6 @@ ICF_OPT = ICF_INV_FREQ_MAX
 
 
 def update_global_model(gm, words, categories):
-	if(gm == None):
-		gm = GlobalModel()
 		
 	for word in words:
 		gm.update_word(word, categories)
@@ -50,7 +48,7 @@ def update_cat_model(words, cat_id):
 
 ### Training ###
 
-gm = None
+gm = GlobalModel()
 
 # Pass on complete Data
 for xml_file in glob.glob(os.path.join(INPUT_FOLDER,"/*")):

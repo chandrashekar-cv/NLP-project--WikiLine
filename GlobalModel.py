@@ -36,9 +36,7 @@ class GlobalModel(object):
 			if(word not in self.word_cat_dict):
 				self.word_cat_dict[word] = {} 
 
-			#check if cat is not present in word_cat_dict[word], update it
-			if(cat not in self.word_cat_dict[word]):
-				self.word_cat_dict[cat] = True
+			self.word_cat_dict[cat] = True
 
 			#Thats all i suppose :P
 
