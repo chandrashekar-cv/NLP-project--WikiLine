@@ -4,10 +4,10 @@ import glob
 import math
 
 from lxml import etree
-import nltk
 
 from GlobalModel import *
 from CategoryModel import *
+from preprcess import *
 
 #### CONSTANTS AND OPTIONS DEFINED HERE
 INPUT_FOLDER = ""
@@ -19,13 +19,7 @@ TF_K_VALUE = 1
 TF_OPT = TF_DBL_NORM
 ICF_OPT = ICF_INV_FREQ_MAX
 
-#Preprocessing logic will be put here
-def preprocess_content(content, opt):
-	# More options can be put here
-	if(opt == 1):
-		return nltk.word_tokenize(content)
-	else:
-		return content.split()
+
 
 
 def update_global_model(gm, words, categories):
