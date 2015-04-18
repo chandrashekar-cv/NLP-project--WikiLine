@@ -5,22 +5,22 @@ Required for calculating ICF (Inverse Category Frequency)
 
 class GlobalModel(object):
 	
-	def __init__():
+	def __init__(self):
 
 		# Category Counter
-		num_cat = 0
+		self.num_cat = 0
 
 		#Max word cat value
-		max_word_cat_val = -1
+		self.max_word_cat_val = -1
 		
 		# Category ("category string" => id) dictionary
-		cat_dict = {}
+		self.cat_dict = {}
 
 		# word_cat dictionary ("word string" => {(cat_id1:true) (cat_id2:true) ... })
-		word_cat_dict = {}
+		self.word_cat_dict = {}
 
 
-	def update_word(word, categories):
+	def update_word(self, word, categories):
 		"""
 		: @param: word (type String) -> word name
 		: @param: categ (type List[String]) -> Category list
@@ -36,35 +36,34 @@ class GlobalModel(object):
 			if(word not in self.word_cat_dict):
 				self.word_cat_dict[word] = {} 
 
-			self.word_cat_dict[cat] = True
+			self.word_cat_dict[word][cat] = True
 
 			#Thats all i suppose :P
 
-	def get_category_id(category):
+	def get_category_id(self, cat):
 		if(cat in self.cat_dict):
 			return self.cat_dict[cat]
-		else
+		else:
 			return -1
 
-	def get_num_cat():
+	def get_num_cat(self):
 		return self.num_cat
 
-	def get_num_cat_given_word(word):
+	def get_num_cat_given_word(self, word):
 		if(word not in self.word_cat_dict):
 			return 0
 		else:
 			return len(self.word_cat_dict[word])
 
 	#To be called in the end
-	def set_max_word_cat_val():
+	def set_max_word_cat_val(self):
 		for word in self.word_cat_dict:
-
 			if(len(self.word_cat_dict[word]) > self.max_word_cat_val):
 				self.max_word_cat_val = len(self.word_cat_dict[word])
 
 		return
 
-	def get_max_word_cat_val():
+	def get_max_word_cat_val(self):
 		if(self.max_word_cat_val == -1):
 			raise Exception("Max word category value not yet set")
 			return -1

@@ -26,20 +26,20 @@ def calc_tf(n, max_n, opt, k):
 	
 	if(opt == TF_BINARY):
 		if(n > 0):
-			return 0
-		else:
 			return 1
+		else:
+			return 0
 	
-	else if(opt == TF_RAW_FREQ):
+	elif(opt == TF_RAW_FREQ):
 		return n
 	
-	else if(opt == TF_LOG_NORM):
+	elif(opt == TF_LOG_NORM):
 		return 1 + math.log(n)
 
-	else if(opt == TF_DBL_NORM):
+	elif(opt == TF_DBL_NORM):
 		return 0.5 + 0.5* (n/max_n)
 
-	else if(opt == TF_DBL_NORM_K):
+	elif(opt == TF_DBL_NORM_K):
 		return k + (1-k)*(n/max_n)
 
 	else:
@@ -60,16 +60,16 @@ def calc_icf(n_t, max_n_t, N, opt):
 	if(ICF_UNARY == opt):
 		return 1
 
-	else if(ICF_INV_FREQ == opt):
+	elif(ICF_INV_FREQ == opt):
 		return math.log(N/n_t)
 
-	else if(ICF_INV_FREQ_S == opt):
+	elif(ICF_INV_FREQ_S == opt):
 		return math.log(1 + (N/n_t))
 
-	else if(ICF_INV_FREQ_MAX == opt):
+	elif(ICF_INV_FREQ_MAX == opt):
 		return math.log(1 + (max_n_t/n_t))
 
-	else if(ICF_PROB_INV_FREQ == opt):
+	elif(ICF_PROB_INV_FREQ == opt):
 		return math.log((N - n_t)/ n_t)
 
 	else:
