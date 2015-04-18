@@ -34,11 +34,11 @@ class CategoryModel(object):
 		else:
 			return 0
 
-	def set_tf_idf_dict(word, tf_idf_score):
-		self.tf_idf_dict[word] = tf_idf_score
+	def set_score(word, score):
+		self.tf_idf_dict[word] = score
 		return
 
-	def get_tf_idf_score(word):
+	def get_score(word):
 		if(word in self.tf_idf_dict):
 			return self.tf_idf_dict[word]
 		else:

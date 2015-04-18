@@ -98,7 +98,7 @@ for i in range(gm.get_num_cat()):
 			#Format: calc_icf(n_t, max_n_t, N, opt)
 			score = calc_tf(cm.get_word_count(word), cm.get_max_wc(), TF_OPT, TF_K_VALUE) \
 					* calc_icf(gm.get_num_cat_given_word(word), gm.get_max_word_cat_val(), gm.get_num_cat(), ICF_OPT)
-			cm.set_tf_idf_dict(score)
+			cm.set_score(word, score)
 
 		pickle.dump(cm, f, protocol=-1)
 
