@@ -16,8 +16,8 @@ GLOBAL_MODEL_FILE = "global.pickle"
 WORD_PREPROCESS = 1
 
 TF_K_VALUE = 1
-TF_OPT = 
-ICF_OPT = 
+TF_OPT = TF_DBL_NORM
+ICF_OPT = ICF_INV_FREQ_MAX
 
 #Preprocessing logic will be put here
 def preprocess_content(content, opt):
