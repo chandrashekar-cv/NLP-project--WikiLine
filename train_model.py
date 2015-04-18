@@ -13,7 +13,6 @@ from preprcess import *
 INPUT_FOLDER = ""
 MODEL_FOLDER = ""
 GLOBAL_MODEL_FILE = "global.pickle"
-WORD_PREPROCESS = 1
 
 TF_K_VALUE = 1
 TF_OPT = TF_DBL_NORM
@@ -59,7 +58,7 @@ for xml_file in glob.glob(os.path.join(INPUT_FOLDER,"/*")):
 	root = tree.getroot()
 
 	# Get tokens 
-	words = preprocess_content(root.findtext('TEXT'), WORD_PREPROCESS)
+	words = preprocess_content(root.findtext('TEXT'), NLTK_TOKENIZE)
 
 	# Get Categories
 	categories = []
