@@ -9,6 +9,9 @@ class CategoryModel(object):
 		
 		# Total num of tokens in category (In case we need to normalize the term frequency)
 		self.num_token = 0
+
+		# Article count
+		self.num_article = 0
 		
 		# Max value of word count
 		self.max_wc = -1
@@ -18,7 +21,13 @@ class CategoryModel(object):
 
 		# Initialize tf icf dict (To be calculated in the end)
 		self.score_dict = {}
-		
+	
+	def inc_num_article(self):
+		self.num_article += 1
+		return
+
+	def get_num_article(self):
+		return self.num_article
 
 	def update_wc(self, word):
 		self.num_token += 1

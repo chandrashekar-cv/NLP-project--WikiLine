@@ -1,16 +1,16 @@
 €cCategoryModel
 CategoryModel
-q)q}q(Umax_wcqK
-Uwc_dictq}q(U2006.ReferencesqKUlackqKUscoringq	KU(KU28q
-KU,K
-Umedium-paceqKU	CuckfieldqKULankansqKUmatchqKULeagueqKUhisqKUcaptain.TurkqKUTurkqKU24qKU	perceivedqKUPremierqKUbowlingqKUwhereqKUFIFAqKUAKUdebutqKUbornqKUsecondqKU36qKUplaysqKUforqKUSussexqKUscoreq KU	currentlyq!KUJulyq"KUKeithq#KUHeq$KU
-specialistq%KU	cricketerq&KUteamq'KUSriq(KUreasonq)KUEnglishq*KUECBq+KUreceivedq,KUNeilq-KU	Septemberq.KUofq/KUEssexq0KUagainstq1KUTurkNeilq2KUfirstq3KUandq4KUtouringq5KUoneq6KUcountyq7KU1stq8KUfromq9KU1983q:KUopportunityq;KUremainedq<KUthreeq=KU.KUwasq>KUisq?KU``q@KUXIqAKUanqBKUCCqCKUseasonqDKUbatsmanqEKUreleasedqFKUhighestqGKUwithqHKUheqIKUSurreyqJKUberthqKKUofficialqLKUfutureqMKU
-wicketlessqNKURichardqOKUplayedqPKUcitedqQKUcricketqRKUleft-handedqSKU''qTKUasqUKUatqVKU	right-armqWKUinqXKU	WimbledonqYKUapprovedqZKUendq[KU
-referee.Heq\KU)KU
-occasionalq]KUclubq^KUsquadq_KUwhichq`KUscoredqaKU'sqbKUthoughqcKUListqdKUAprilqeKUoversqfKUclassqgKUaKUwellqhKU	departureqiKU2002qjKU2006qkKUAtqlKU2005qmKUtheqnKUcameqoKuU
-score_dictqp}qq(hG@½ò¿ª®hG?êgÙkH¥†h	G?árO²»}U(G?Øw˜v/h
-G?åÃñÜ~³pU,G?æ:üµ`œhG?ï OÍ)o^hG@
-‚-XWhG?ô3ƒ?g‘hG?İ$›'¹eşhG?áöÏ¾»ÏFhG?ácæp§·hG?âğUL“ShG@
-‚-XWhG@a0ë¦/hG?å‹<EWÙhG?ôó~·3KhG?æSCås¼`h'G?ÛÎMĞhÔhG?á¡ŞmëÏhG?úËˆt[€haG?ß^&ªä>€hG?à;—A>¸hG?Ø•˜°o£hG?ß±úÖ)úihG?ì>›©o`ähG?èšøš¤¸†hG?ßnOæIå‚hG?í<…' ä³h G?à‘•£]}h!G?æ;Ø‰`#h"G?âK»d`â*h#G?ñÔQ¶µ‰êh$G?ÛrBIä[éh%G?ërîøt+h&G?Úò‡è’Ûh(G?âãXïh)G?ğY³Á«Öh*G?àÅ^ÆLæh+G?ğÀ|µm9h,G?çaÄÁb(h-G?ğF‡xh.G?á¸QW‡ h/G?Û'ù¼´®Rh0G?íñ=È9+Òh1G?ÚiÍßV²h2G@
-‚-XWh3G?İŞ¸?hNG?ò[##W‡ûh5G?çSZ»ëXãh6G?Ûõˆwè1§h7G?ãªbÂ/h8G?ë·–8æh9G?Úg¾·Tk÷h:G?é"pş¤bkhfG?äY±lÇq¾h<G?åâhÑ”bh=G?Ş—:Ó¦gU.G?ßş‘„Nh>G?Øëîì9¯hQG?ñ±¾^#>vhRG?ÙÚÉÀb1hAG?äË§x©ãnhBG?Ü’&–qhCG?ñü³;¢ÔƒhDG?Şé‹Nğ±hEG?Ş0ÏWb§¿hFG?ê^j¤ÜwhGG?á>İ^Á¨hHG?Üñ¡¾²'hIG?Û™Ã?MhJG?êù/°hÄhKG?ı¦Ş*ŸfhLG?ë·–8æhMG?ê=¥+…hh4G?ÚÕœJbî¦hOG?íI6;bOhPG?Ù9‡Ğ^¦Éh?G?İ{,ur7h@G?İ}+RŸhSG?èÏŠlŞhTG?İ,6£¦,hUG?Ş‚•¨şëhVG?Ùšq³Û¼©hWG?æñ¥ˆ{hXG?áÁ&g‡İhYG?ÿ½ZÁh½h[G?á\ã†1¸h\G@
-‚-XWU)G?Øw˜v/h]G?íOFT-úTh^G?ãFÔ4¿2h_G?â¾kÙÌúh`G?İU†Ç°UAG?à‘•£]}hbG?Ú@Ş/R¡hcG?æ9¾ˆsRhgG?äƒÂu¸ßåhdG?éwçÜô›/heG?âãXïh;G?ë¬vìƒÛhZG?ÿŸ!A¿’ÃUaG?Ú¥ŠY ƒhhG?áÆì¾hiG?ôÜQvîehjG?ãÉ³Çû¶hkG?ág-¤H0vhlG?äí‰&SşhmG?áÛ=ûf4ñhnG?âòîSZŸhoG?á¼+nÀ–3uU	num_tokenqrK ub.
+q)q}q(Unum_articleqKUmax_wcqK
+Uwc_dictq}q(U2006.ReferencesqKUlackq	KUscoringq
+KU(KU28qKU,K
+Umedium-paceqKU	CuckfieldqKULankansqKUmatchqKULeagueqKUhisqKUcaptain.TurkqKUTurkqKU24qKU	perceivedqKUPremierqKUbowlingqKUwhereqKUFIFAqKUAKUdebutqKUbornqKUsecondqKU36qKUplaysqKUforqKUSussexq KUscoreq!KU	currentlyq"KUJulyq#KUKeithq$KUHeq%KU
+specialistq&KU	cricketerq'KUteamq(KUSriq)KUreasonq*KUEnglishq+KUECBq,KUreceivedq-KUNeilq.KU	Septemberq/KUofq0KUEssexq1KUagainstq2KUTurkNeilq3KUfirstq4KUandq5KUtouringq6KUoneq7KUcountyq8KU1stq9KUfromq:KU1983q;KUopportunityq<KUremainedq=KUthreeq>KU.KUwasq?KUisq@KU``qAKUXIqBKUanqCKUCCqDKUseasonqEKUbatsmanqFKUreleasedqGKUhighestqHKUwithqIKUheqJKUSurreyqKKUberthqLKUofficialqMKUfutureqNKU
+wicketlessqOKURichardqPKUplayedqQKUcitedqRKUcricketqSKUleft-handedqTKU''qUKUasqVKUatqWKU	right-armqXKUinqYKU	WimbledonqZKUapprovedq[KUendq\KU
+referee.Heq]KU)KU
+occasionalq^KUclubq_KUsquadq`KUwhichqaKUscoredqbKU'sqcKUthoughqdKUListqeKUAprilqfKUoversqgKUclassqhKUaKUwellqiKU	departureqjKU2002qkKU2006qlKUAtqmKU2005qnKUtheqoKUcameqpKuU
+score_dictqq}qr(hG@½ò¿ª®h	G?êgÙkH¥†h
+G?árO²»}U(G?Øw˜v/hG?åÃñÜ~³pU,G?æ:üµ`œhG?ï OÍ)o^hG@
+‚-XWhG?ô3ƒ?g‘hG?İ$›'¹eşhG?áöÏ¾»ÏFhG?ácæp§·hG?âğUL“ShG@
+‚-XWhG@a0ë¦/hG?å‹<EWÙhG?ôó~·3KhG?æSCås¼`h(G?ÛÎMĞhÔhG?á¡ŞmëÏhG?úËˆt[€hbG?ß^&ªä>€hG?à;—A>¸hG?Ø•˜°o£hG?ß±úÖ)úihG?ì>›©o`ähG?èšøš¤¸†hG?ßnOæIå‚h G?í<…' ä³h!G?à‘•£]}h"G?æ;Ø‰`#h#G?âK»d`â*h$G?ñÔQ¶µ‰êh%G?ÛrBIä[éh&G?ërîøt+h'G?Úò‡è’Ûh)G?âãXïh*G?ğY³Á«Öh+G?àÅ^ÆLæh,G?ğÀ|µm9h-G?çaÄÁb(h.G?ğF‡xh/G?á¸QW‡ h0G?Û'ù¼´®Rh1G?íñ=È9+Òh2G?ÚiÍßV²h3G@
+‚-XWh4G?İŞ¸?hOG?ò[##W‡ûh6G?çSZ»ëXãh7G?Ûõˆwè1§h8G?ãªbÂ/h9G?ë·–8æh:G?Úg¾·Tk÷h;G?é"pş¤bkhgG?äY±lÇq¾h=G?åâhÑ”bh>G?Ş—:Ó¦gU.G?ßş‘„Nh?G?Øëîì9¯hRG?ñ±¾^#>vhSG?ÙÚÉÀb1hBG?äË§x©ãnhCG?Ü’&–qhDG?ñü³;¢ÔƒhEG?Şé‹Nğ±hFG?Ş0ÏWb§¿hGG?ê^j¤ÜwhHG?á>İ^Á¨hIG?Üñ¡¾²'hJG?Û™Ã?MhKG?êù/°hÄhLG?ı¦Ş*ŸfhMG?ë·–8æhNG?ê=¥+…hh5G?ÚÕœJbî¦hPG?íI6;bOhQG?Ù9‡Ğ^¦Éh@G?İ{,ur7hAG?İ}+RŸhTG?èÏŠlŞhUG?İ,6£¦,hVG?Ş‚•¨şëhWG?Ùšq³Û¼©hXG?æñ¥ˆ{hYG?áÁ&g‡İhZG?ÿ½ZÁh½h\G?á\ã†1¸h]G@
+‚-XWU)G?Øw˜v/h^G?íOFT-úTh_G?ãFÔ4¿2h`G?â¾kÙÌúhaG?İU†Ç°UAG?à‘•£]}hcG?Ú@Ş/R¡hdG?æ9¾ˆsRhhG?äƒÂu¸ßåheG?éwçÜô›/hfG?âãXïh<G?ë¬vìƒÛh[G?ÿŸ!A¿’ÃUaG?Ú¥ŠY ƒhiG?áÆì¾hjG?ôÜQvîehkG?ãÉ³Çû¶hlG?ág-¤H0vhmG?äí‰&SşhnG?áÛ=ûf4ñhoG?âòîSZŸhpG?á¼+nÀ–3uU	num_tokenqsK ub.

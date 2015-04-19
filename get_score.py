@@ -4,40 +4,30 @@ import cPickle as pickle
 
 from GlobalModel import *
 from CategoryModel import *
+from preprocess import *
 
 MODEL_FOLDER = "model"
 GLOBAL_MODEL_FILE = "global.pkl"
 
 
-def get_score_given_word_cat(word, cat):
-	score = -1
-	with open(os.path.join(MODEL_FOLDER, GLOBAL_MODEL_FILE), 'rb') as f:
-		gm = pickle.load(f)
-		with open(os.path.join(MODEL_FOLDER, str(gm.get_category_id(cat)) +'.pkl'), 'rb') as f:
-			cm = pickle.load(f)
-			score = cm.get_score(word)
-	if(score == -1):
-		raise Exception ("Couldn't fetch score")
-	return score
+def get_scores(sentences, cat):
+    scores, gm = [], None
+    
+    #Load gm
+    with open(os.path.join(MODEL_FOLDER, GLOBAL_MODEL_FILE), 'rb') as f:
+        gm = pickle.load(f)
+        #Load cm
+        with open(os.path.join(MODEL_FOLDER, str(gm.get_category_id(cat)) +'.pkl'), 'rb') as f:
+            cm = pickle.load(f)
+            #If article count is <= 1
+            if(cm.get_num_article() <= 1):
+                return None
 
-def getScoreForCategories(event, categories):
-        '''
-	parameters
-            event = event description/sentence.
-            categories = all the categories the event belongs to.
-            Typically all the categories present in the article it was found in
-        '''
-        scores = defaultdict(float)
-        event = event.strip()
-        words = event.split(" ")
-        
-        for category in categories:
-            score=0
-            for word in words:
-                score+=  get_score_given_word_cat(word, category)
-            scores[category] = score
+            for s in sentences:
+                score = 0
+                for w in preprocess_content(s):
+                    score += cm.get_score(w)
+                scores.append(score)
 
-        
-        predCategory = max(scores.keys(), key=(lambda key: scores[key] ))
-        return predCategory
+    return scores 
     
