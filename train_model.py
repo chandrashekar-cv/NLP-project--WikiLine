@@ -12,7 +12,7 @@ from preprocess import *
 from utility import *
 
 #### CONSTANTS AND OPTIONS DEFINED HERE
-INPUT_FOLDER = "data"
+INPUT_FOLDER = "sample"
 MODEL_FOLDER = "model"
 GLOBAL_MODEL_FILE = "global.pkl"
 
