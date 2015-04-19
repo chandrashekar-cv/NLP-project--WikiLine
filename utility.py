@@ -37,10 +37,10 @@ def calc_tf(n, max_n, opt, k):
 		return 1 + math.log(n)
 
 	elif(opt == TF_DBL_NORM):
-		return 0.5 + 0.5* (n/max_n)
+		return 0.5 + 0.5* (float(n)/float(max_n))
 
 	elif(opt == TF_DBL_NORM_K):
-		return k + (1-k)*(n/max_n)
+		return k + (1-k)*(float(n)/float(max_n))
 
 	else:
 		raise Exception("Invalid TF calculation option")
@@ -61,16 +61,16 @@ def calc_icf(n_t, max_n_t, N, opt):
 		return 1
 
 	elif(ICF_INV_FREQ == opt):
-		return math.log(N/n_t)
+		return math.log(float(N)/float(n_t))
 
 	elif(ICF_INV_FREQ_S == opt):
-		return math.log(1 + (N/n_t))
+		return math.log(1 + float(N)/float(n_t))
 
 	elif(ICF_INV_FREQ_MAX == opt):
-		return math.log(1 + (max_n_t/n_t))
+		return math.log(1 + float(max_n_t)/float(n_t))
 
 	elif(ICF_PROB_INV_FREQ == opt):
-		return math.log((N - n_t)/ n_t)
+		return math.log(float(N - n_t)/ float(n_t))
 
 	else:
 		raise Exception("Invalid TF calculation option")

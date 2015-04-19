@@ -106,6 +106,11 @@ for i in range(gm.get_num_cat()):
 	for word in cm.wc_dict:
 		#Format: calc_tf(n, max_n, opt, k) 
 		#Format: calc_icf(n_t, max_n_t, N, opt)
+		if(word == 'captains'):
+			print "captains"
+			print calc_tf(cm.get_wc(word), cm.get_max_wc(), TF_OPT, TF_K_VALUE)
+			print calc_icf(gm.get_num_cat_given_word(word), gm.get_max_word_cat_val(), gm.get_num_cat(), ICF_OPT)
+		
 		score = calc_tf(cm.get_wc(word), cm.get_max_wc(), TF_OPT, TF_K_VALUE) \
 				* calc_icf(gm.get_num_cat_given_word(word), gm.get_max_word_cat_val(), gm.get_num_cat(), ICF_OPT)
 		cm.set_score(word, score)
