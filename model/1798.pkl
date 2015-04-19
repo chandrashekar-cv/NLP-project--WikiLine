@@ -1,0 +1,9 @@
+€cCategoryModel
+CategoryModel
+q)q}q(Umax_wcqKUwc_dictq}q(UandqKUtheqKUmajorq	KUSadlerq
+KUplayedqKU
+previouslyqKUBrettqKUisqKUitqKU	YorkshireqKUbornqKU	includingqKUBoardqKUinqKUfirst-classqKUJohnqKUDewsburyqKU	announcedqKUCricketqKUHisqKUmissedqKUforqKU.References.Cricket-OnlineqKU)KU(KUhadqKU,KULeonardqKU.KUcurrentq KUbone.Inq!KUcoachingq"KUYorkq#KUtakenq$KUJulyq%KUseveralq&KUwasq'KU2013q(KUHeq)KUhisq*KU	cricketerq+KUthatq,KUseasonq-KU
+Universityq.KUafterq/KUHeadq0KUpositionq1KUmostq2KUjobq3KUCoachq4KUUYCCq5KUbrokeq6KUEnglishq7KUcollarq8KUanq9KUwithq:KUNovemberq;KULeeq<KUaKUleagueq=KUhasq>KUEnglandq?KU
+Derbyshireq@KU19qAKUofqBKU1981qCKUupqDKUteamsqEKUClubqFKU	part-timeqGKUClub.SadlerqHKUrepresentingqIKU2005qJKUthroughqKKULeicestershireqLKUbouncerqMKUinjuryqNKUGlasshoughtonqOKuU
+score_dictqP}qQ(hG?Ö.Bşú9ïh	G?æ.Bşú9ïhG?Ö.Bşú9ïhG?á“êz­hG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?éÀA÷í3hG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?á“êz­hG?Ö.Bşú9ïhIG?éÀA÷í3hCG?á“êz­hG?Ö.Bşú9ïhG?á“êz­h>G?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?á“êz­hG?Ö.Bşú9ïhG@Y²ÚŒJHU)G?Ö.Bşú9ïU(G?Ö.Bşú9ïhG?ğ¢²?;«sU,G?æ.Bşú9ïhG?÷÷B{sã‘U.G?Ö.Bşú9ïh G?æ.Bşú9ïh!G@Pãÿ™Sh"G?á“êz­h#G?óá¼Ó}h$G?á“êz­h%G?Ö.Bşú9ïh&G?á“êz­h'G?Ö.Bşú9ïhG?Ö.Bşú9ïh)G?Ö.Bşú9ïh*G?Ö.Bşú9ïh+G?Ö.Bşú9ïh,G?Ö.Bşú9ïh-G?Ö.Bşú9ïh.G?á“êz­h/G?Ö.Bşú9ïh0G?òk±»µUh2G?Ö.Bşú9ïh3G?æ.Bşú9ïh4G?ï"r®2ZWh5G@Pãÿ™Sh6G?æ.Bşú9ïh7G?Ö.Bşú9ïh9G?Ö.Bşú9ïh:G?Ö.Bşú9ïh8G@¹(	öeÔh;G?Ö.Bşú9ïh<G?ï"r®2ZWUaG?Ö.Bşú9ïh=G?æ.Bşú9ïh
+G@Pãÿ™Sh?G?Ö.Bşú9ïh@G?éÀA÷í3hAG?á“êz­hBG?Ö.Bşú9ïhG@Pãÿ™ShDG?Ö.Bşú9ïhKG?á“êz­hEG?á“êz­hFG?Ö.Bşú9ïhGG?ì«ú* hLG?éÀA÷í3hHG@Pãÿ™Sh(G?á“êz­hJG?Ö.Bşú9ïh1G?á“êz­hG?Ö.Bşú9ïhMG?ï"r®2ZWhNG?á“êz­hOG@Pãÿ™SuU	num_tokenqRKhub.
