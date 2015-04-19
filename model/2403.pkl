@@ -2,5 +2,8 @@
 CategoryModel
 q)q}q(Umax_wcqKUwc_dictq}q(UandqKUplayedqKUPunjabq	KU''q
 KUbornqKUinqKU	PakistaniqKUTestsqKUfromqKUforqKUtoqKU)KUJr.qKU,KU.KUalsoqKUShakeelqKU2KUNovemberqKUwasqKUisqKUHeqKUMohammadqKUDaskaqKUAhmedqKU	cricketerqKU3KUwhoqKUwicketkeeper/batsman.ReferencesqKUformerqKUaKUODIsq KU1993q!KU12q"KU1995q#KU1971q$KUAnotherq%KU(KUPakistanq&KuU
-score_dictq'}q((hG?Ö.Bşú9ïhG?Ö.Bşú9ïh	G?éÀA÷í3h
-G?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?æ.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïU)G?Ö.Bşú9ïhG?şF6üTCU,G?æ.Bşú9ïU.G?Ö.Bşú9ïhG?Ö.Bşú9ïhG@Y²ÚŒJHU2G?á“êz­hG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?Ö.Bşú9ïhG?éÀA÷í3hG@,X—Í†hG?ï"r®2ZWhG?Ö.Bşú9ïU3G?Ö.Bşú9ïhG?Ö.Bşú9ïhG@,X—Í†hG?Ö.Bşú9ïUaG?Ö.Bşú9ïh G?á“êz­h!G?á“êz­h"G?á“êz­h#G?á“êz­h$G?æ.Bşú9ïh%G?ï"r®2ZWU(G?Ö.Bşú9ïh&G?Ö.Bşú9ïuU	num_tokenq)K2ub.
+score_dictq'}q((hG?ÛóØ"Ñ¸˜hG?á2Ü™´æh	G?ñ6İ$„ªˆh
+G?ããöµeâXhG?ÛïÏºkg–hG?Û½Ì$IhG?íÜHÁîahG?ã{—Î@hG?Ş‡D±cihG?Ü5hYhG?ÜŠZá!wŠU)G?ÛÍ¸ãdÇhG@F£@U,G?æ:üµ`œU.G?à¢²?;«shG?ŞÜÄW×î'hG@Ğ6Š7ˆ¸U2G?ç@àßCDhG?åB+<ÉhG?ÜQì—×dthG?Ûûì—w«hG?Ü—øŠhhG?ğ%´6KğhG@
+zã“+hG?ûj‹†n
+bhG?ŞŸ=Y¾'‰U3G?å³¿®G%ÓhG?ßF/;#hG@
+zã“+hG?àA™B³UaG?à§vw¦ôRh G?æfO8Lh!G?ê‰°úæ6h"G?æ%gDh#G?ê‰°úæ6h$G?ïZšşş£Æh%G?ôB¹òˆyĞU(G?ÛÍ¸ãdÇh&G?ä-÷|kuU	num_tokenq)K2ub.
