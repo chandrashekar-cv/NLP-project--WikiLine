@@ -29,26 +29,6 @@ function wikiTimelineChart() {
             
 			// establish base SVG frame
 			
-//            var textBase = d3.select("#Wikiline").append("div")
-//				.attr("class","textBase")
-//				.style("left", function(d,i) { return ((i%2 == 0) ? _leftColMarginL : _rightColMarginL); })
-//				.style("top", function(d, i) { return i * _entryHeight + _entryGap; })
-//                .style("width", _leftColMarginR - _leftColMarginL)
-//                .style("height", 85);
-////				.attr("style", "font-size: 12px; font-family: Arial");
-//
-//			// lay out text block - date followed by event title
-//
-//			textBase.append("span")
-//				.attr("class", "date")
-//				.text(function(d) { console.log(_date(d)); return _date(d); })
-//
-//			textBase.append("span")
-//				.text(function(d) { return _desc(d); } );
-//            
-//            // draw box around each event, factoring in left or right column-ness
-
-            
 			var svgBase = d3.select(this).append("svg:svg")
 				.attr("width", _rightColMarginR + 5)
 				.attr("height", (d.length + 1.5) * _entryHeight);
@@ -77,7 +57,6 @@ function wikiTimelineChart() {
 				.attr("cy", function(d, i) { return i * _entryHeight + _entryGap + _entryOffset; })
 				.attr("r", _circleRadius)
                 .attr("class", "circle");
-//				.attr("style", "fill:#999999; stroke:#ffffff; stroke-width:3")
                             
 			entryBase.append("polygon")
 				.attr("points", function(d, i) {
@@ -103,9 +82,6 @@ function wikiTimelineChart() {
 						+ " " + _rightColMarginR + "," + (yTop + 85);
 				})
                 .attr("class", "polygon");
-//				.attr("style", "fill:#eeeeee; stroke:#999999; stroke-width:1")
-//				.on("mouseover", function() {d3.select(this).style("fill", "aliceblue").style("stroke", "#0000ff");})
-//				.on("mouseout", function() {d3.select(this).style("fill", "#eeeeee").style("stroke", "#999999"); });
             
             
             entryBase.append('image')
@@ -136,8 +112,6 @@ function wikiTimelineChart() {
             
             
 			textBase.append("tspan")
-				//.attr("x", function(d, i) { return ((i%2 == 0) ? _leftColMarginL : _rightColMarginL) + 4; })
-				//.attr("dy", 14)
 				.html(function(d, i) {
                         var words =  _desc(d).split(/\s+/).reverse();
                         var line = [];
@@ -159,13 +133,9 @@ function wikiTimelineChart() {
                             }
                             
                             $('#testSpan').html(line.join(" ")).attr("class","textBase");
-//                            console.log(_leftColMarginR - _leftColMarginL);
-                            console.log($("#testSpan").html());
-                            console.log($("#testSpan").width());
                             if($("#testSpan").width() > (_leftColMarginR - _leftColMarginL -_entryImgWidth - 10)) {
                                 var word = line.pop();
                                 var svgword = svgline.pop();
-                                console.log("inside true");
                                 wordHtml += "<tspan x=\""+ x +"\" y=\""+ y.toString() +"\">" + svgline.join(" ") + "</tspan>";
                                 line = [word];
                                 svgline = [svgword];

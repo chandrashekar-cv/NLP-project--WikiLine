@@ -4,9 +4,9 @@ d3.json("./wiki.json", function(json) {
 
 	// setup data for chart
 	
-	json.events.forEach(function(p, i) {
-		p.date = +p.date; // coerce into right type
-	});
+	// json.events.forEach(function(p, i) {
+	// 	p.date = +p.date; // coerce into right type
+	// });
 
 	json.events.sort(function(a,b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
 

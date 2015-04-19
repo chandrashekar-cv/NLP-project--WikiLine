@@ -25,7 +25,7 @@ def get_scores(sentences, cat):
 
             for s in sentences:
                 score = 0
-                for w in preprocess_content(s):
+                for w in preprocess_content(s, NLTK_TOKENIZE):
                     score += cm.get_score(w)
                 scores.append(score)
 
