@@ -13,7 +13,7 @@ from utility import *
 
 #### CONSTANTS AND OPTIONS DEFINED HERE
 INPUT_FOLDER = "sample"
-MODEL_FOLDER = "model"
+MODEL_FOLDER = "complete_model"
 GLOBAL_MODEL_FILE = "global.pkl"
 
 TF_K_VALUE = 1
@@ -24,50 +24,34 @@ ICF_OPT = ICF_INV_FREQ_MAX
 
 
 def update_global_model(gm, words, categories):
-	
+	word_ids = []
 	for word in words:
-		gm.update_word(word, categories)
+		# if("." in word):
+		# 	print word
+		word_ids.append(gm.update_word(word, categories))
+	return gm, word_ids
 
-	return gm
-
-
-def update_cat_model(words, cat_id):
+def update_cat_model(cm_dict, word_ids, cat_id):
 	#Check if the corresponing cat_id pickle file exists
-	if(not os.path.isfile(os.path.join(MODEL_FOLDER, str(cat_id)+'.pkl'))):
-		
-		with open(os.path.join(MODEL_FOLDER, str(cat_id)+'.pkl'), 'wb') as f:
-			cm = CategoryModel()
-			pickle.dump(cm, f, protocol=-1)
-			#print "dump successful"
-	
-	cm = None
-	with open(os.path.join(MODEL_FOLDER, str(cat_id)+'.pkl'), 'rb') as f:
-		cm = pickle.load(f)
-
+	if(cat_id not in cm_dict):
+		cm_dict[cat_id] = CategoryModel()
 	#update article count
-	cm.inc_num_article()
-	
+	cm_dict[cat_id].inc_num_article()
 	#print len(words)
-	for word in words:
-		cm.update_wc(word)
+	for w_id in word_ids:
+		cm_dict[cat_id].update_wc(w_id)
 	
-	with open(os.path.join(MODEL_FOLDER, str(cat_id)+'.pkl'), 'wb') as f:
-		pickle.dump(cm, f, protocol=-1)
-	
-	return
+	return cm_dict
+
+
 
 ### Training ###
 s_t = time.time()
 
 gm = GlobalModel()
+cm_dict = {}
 
-# ctr = 0
-# Pass on complete Data
 for xml_file in glob.glob(os.path.join(INPUT_FOLDER,"*")):
-	# if(ctr == 100):
-	# 	break
-	# print ctr
-	# ctr += 1
 	print xml_file
 	tree = etree.parse(xml_file)
 	root = tree.getroot()
@@ -81,10 +65,10 @@ for xml_file in glob.glob(os.path.join(INPUT_FOLDER,"*")):
 		categories.append(cat.text)
 
 	#Update Global Model
-	gm = update_global_model(gm, words, categories)
+	gm, word_ids = update_global_model(gm, words, categories)
 
 	for cat in categories:
-		update_cat_model(words, gm.get_category_id(cat))
+		cm_dict = update_cat_model(cm_dict, word_ids, gm.get_category_id(cat))
 
 e_t = time.time()
 print "time taken for Training: " + str(e_t - s_t)
@@ -97,25 +81,22 @@ s_t = time.time()
 # To set value of word appearing maximum categories
 gm.set_max_word_cat_val()
 
-for i in range(gm.get_num_cat()):
-	cm = None
-	with open(os.path.join(MODEL_FOLDER, str(i+1)+'.pkl'), 'rb') as f:
-		cm = pickle.load(f)
-
+for c in cm_dict:
+	print "Updating score for category: ", c
 	#To calculate max word ct
-	cm.update_max_wc()
+	cm_dict[c].update_max_wc()
 
 	#Score calculation
-	for word in cm.wc_dict:
+	for word_id in cm_dict[c].wc_dict:
 		#Format: calc_tf(n, max_n, opt, k) 
 		#Format: calc_icf(n_t, max_n_t, N, opt)
-		score = calc_tf(cm.get_wc(word), cm.get_max_wc(), TF_OPT, TF_K_VALUE) \
-				* calc_icf(gm.get_num_cat_given_word(word), gm.get_max_word_cat_val(), gm.get_num_cat(), ICF_OPT)
-		cm.set_score(word, score)
+		score = calc_tf(cm_dict[c].get_wc(word_id), cm_dict[c].get_max_wc(), TF_OPT, TF_K_VALUE) \
+				* calc_icf(gm.get_num_cat_given_word(word_id), gm.get_max_word_cat_val(), gm.get_num_cat(), ICF_OPT)
+		cm_dict[c].set_score(word_id, score)
 
-	with open(os.path.join(MODEL_FOLDER, str(i+1)+'.pkl'), 'wb') as f:
-		pickle.dump(cm, f, protocol=-1)
-
+	with open(os.path.join(MODEL_FOLDER, str(c)+'.pkl'), 'wb') as f:
+		pickle.dump(cm_dict[c], f, protocol=-1)
+	cm_dict[c] = None
 
 # Update GlobalModel pickle
 with open(os.path.join(MODEL_FOLDER, GLOBAL_MODEL_FILE), 'wb') as f:
