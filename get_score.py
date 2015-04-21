@@ -26,7 +26,7 @@ def get_scores(sentences, cat):
             for s in sentences:
                 score = 0
                 for w in preprocess_content(s, NLTK_TOKENIZE):
-                    score += cm.get_score(w)
+                    score += cm.get_score(gm.get_word_id(w))
                 scores.append(score)
 
     return scores 
