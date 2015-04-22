@@ -11,6 +11,7 @@ class netagger:
         self.cat_re = re.compile('^__Category:(.*?)__$')
         self.url_re = re.compile('<doc .* url="(.*)" title.*>',)
         self.id_re = re.compile('<doc id="([0-9]*)" .*>')
+        self.addspace_re = re.compile("(\.?)(.*?)")
 
     '''    def classifyDoc(self,title):
         data = self.netag.tag(title.split())
@@ -24,19 +25,20 @@ class netagger:
     '''    
     def parseFiles(self,path):
         files = os.listdir(path)
-        for file in files:
-            if not(file=="desktop.ini"):
-                if(os.path.isdir(path+file)):
-                    self.parseFiles(path+file)
+        for filename in files:
+            if not(filename=="desktop.ini"):
+                if(os.path.isdir(path+filename)):
+                    self.parseFiles(path+filename)
                 else:
                     if(not path.endswith("/")):
                         path+="/"
-                    self.get_content(open(path+file,'r',encoding="ISO-8859-1"))
+                    
+                    self.get_content(open(path+filename,'r',encoding='ISO-8859-1'))
                     
             
     
-    def get_content(self,file):
-        lines = file.readlines()
+    def get_content(self,filedata):
+        lines = filedata.readlines()
         docStart= False
         firstLine = False
         live_cat_found = False
@@ -45,7 +47,7 @@ class netagger:
         docIndex =""
         categories=[]
         for line in lines:
-            line=line.strip()
+            
             if(not docStart and re.match("^<doc.*>$",line)):
                 docStart= True
                 firstLine=True
@@ -78,6 +80,8 @@ class netagger:
                         live_cat_found = True
                     categories.append(category)
                 else:
+                    line = re.sub("(\.)([]*?)",r"\1 \2", line)
+                    line = re.sub("<\\{0,1}[A-Za-z0-9]*>","",line)
                     articleContent+= line
         
     def printToFile(self,content,categories,title,url,docIndex):
@@ -92,13 +96,17 @@ class netagger:
         root.append(cat_list)
         ET.SubElement(root,"URL").text=url
         ET.SubElement(root,"DOC-INDEX").text=docIndex
-        
+        title = title.replace("\n","")
         filename=re.sub('[*]|\?|/|<|>|:|"|\|',"_",title)
         print(str(tagger.indexer))
         with open(self.outputPath+filename+".xml", mode='wb') as outputfile:
             outputfile.write(ET.tostring(root, encoding="ISO-8859-1", method="xml"))
         self.indexer+=1
+    
+            
+        
+         
 
-tagger = netagger('english.all.3class.distsim.crf.ser.gz','output/',1)
-tagger.parseFiles('F:/pythonWorkspace/wikiextractor/src/extracted/')
+tagger = netagger('english.all.3class.distsim.crf.ser.gz','../../input/',1)
+tagger.parseFiles('../../output/')
 print(str(tagger.indexer))    
