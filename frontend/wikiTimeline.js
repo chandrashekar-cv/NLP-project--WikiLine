@@ -5,13 +5,15 @@ function wikiTimelineChart() {
     var _imgUrl = function(value) { return value; };
     var _boldWords = function(value) { return value; };
     
-    var _entryHeight = 50; 	// spacing between each entry
+    var _entryHeight = 100; 	// spacing between each entry
 	var _entryGap = 10;		// gap above the start of each entry
     var _entryOffset = 25; //  Y - offset after which cirle is placed 
     var _circleRadius = 5; // Radius of circle
     var _polygonProt = _circleRadius;
     var _entryImgWidth = 100;
     var _textHeight = 14;
+    var _entryYOffset = 120;
+    var _xOffset = 100;
 	
 	var _width = 0; 		// default is set later 
     
@@ -24,23 +26,23 @@ function wikiTimelineChart() {
     
     function my(selection) {
 		selection.each(function(d, i) {
-			console.log(d[i]);
+			console.log(d);
 			// generate chart here; 'd' is the data and 'this' is the element
             
 			// establish base SVG frame
 			
 			var svgBase = d3.select(this).append("svg:svg")
-				.attr("width", _rightColMarginR + 5)
+				.attr("width", _rightColMarginR + _xOffset)
 				.attr("height", (d.length + 1.5) * _entryHeight);
             
             // draw mid-line - use number of events to determine length of the line
             
-            console.log("d.length is " + d.length);
+            //console.log("d.length is " + d.length);
             svgBase.append("line")
 				   .attr("x1", _midMargin)
 				   .attr("y1", 0)
 				   .attr("x2", _midMargin)
-				   .attr("y2", (d.length + 1.5) * _entryHeight)
+				   .attr("y2", (d.length + 0.0) * _entryHeight)
                    .attr("class", "line");
 //				   .attr("stroke", "#999999")
 //				   .attr("stroke-width", 5);
@@ -70,16 +72,16 @@ function wikiTimelineChart() {
 						+ " " + _leftColMarginR + "," + (yTop + _entryOffset - _circleRadius) 
 						+ " " + (_leftColMarginR+ _polygonProt) + "," + (yTop + _entryOffset) 
 						+ " " + _leftColMarginR + "," + (yTop + _entryOffset + _circleRadius) 
-						+ " " + _leftColMarginR + "," + (yTop + 85) 
-						+ " " + _leftColMarginL + "," + (yTop + 85)
+						+ " " + _leftColMarginR + "," + (yTop + _entryYOffset) 
+						+ " " + _leftColMarginL + "," + (yTop + _entryYOffset)
 					: 
 						_rightColMarginR + "," + yTop
 						+ " " + _rightColMarginL + ","  + yTop
 						+ " " + _rightColMarginL + ","  + (yTop + _entryOffset - _circleRadius)
 						+ " " + (_rightColMarginL- _polygonProt) + "," + (yTop + _entryOffset)
 						+ " " + _rightColMarginL + ","  + (yTop + _entryOffset + _circleRadius)
-						+ " " + _rightColMarginL + ","  + (yTop + 85)
-						+ " " + _rightColMarginR + "," + (yTop + 85);
+						+ " " + _rightColMarginL + ","  + (yTop + _entryYOffset)
+						+ " " + _rightColMarginR + "," + (yTop + _entryYOffset);
 				})
                 .attr("class", "polygon");
             
@@ -92,7 +94,7 @@ function wikiTimelineChart() {
                                                     (_rightColMarginR - _entryImgWidth);} )
                 .attr("y", function(d,i) { return i * _entryHeight + _entryGap;})
                 .attr("width", _entryImgWidth)
-                .attr("height", 85);
+                .attr("height", _entryYOffset);
                       
            var textBase = entryBase.append("text")
 				// text is written in to left or right column, depending on odd/even of index
@@ -114,6 +116,8 @@ function wikiTimelineChart() {
 			textBase.append("tspan")
 				.html(function(d, i) {
                         var words =  _desc(d).split(/\s+/).reverse();
+                        //console.log(_desc(d));
+                        //console.log(words.length)
                         var line = [];
                         var svgline = [];
                         var wordHtml = "";
@@ -123,6 +127,7 @@ function wikiTimelineChart() {
                         var wC = 0;
                         var bwC = 0;
                         while( word = words.pop()) {
+                        	//console.log(word);
                             if((boldwords != []) && boldwords[bwC] == wC) {
                                 line.push("<span class=\"date\">" + word + "</span>");
                                 svgline.push("<tspan class=\"date\">" + word + "</tspan>");
@@ -145,6 +150,7 @@ function wikiTimelineChart() {
                         }
                         wordHtml += "<tspan x=\""+ x +"\" y=\""+ y.toString() +"\">" + svgline.join(" ") + "</tspan>";
                         $("#testSpan").text("");
+                        //console.log(wordHtml);
                         return wordHtml;
                     } );			
 							
@@ -157,12 +163,13 @@ function wikiTimelineChart() {
 		
 		_width = value;
 		
-		_midMargin = _width/2;
-		_leftColMarginR = _midMargin - 13;
-		_rightColMarginL = _midMargin + 13;
+		_midMargin = (_width/2);
+		_leftColMarginR = _midMargin - 13 + _xOffset;
+		_rightColMarginL = _midMargin + 13 + _xOffset;
 		
-		_leftColMarginL = 5;
-		_rightColMarginR = _width - 5;
+		_leftColMarginL = 5 + _xOffset;// + _xOffset;
+		_rightColMarginR = _width - 5 + _xOffset;
+		_midMargin += _xOffset;
 		
 		return my;
 	}

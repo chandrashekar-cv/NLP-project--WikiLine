@@ -17,8 +17,8 @@ svg .polygon {
 }
 
 svg .polygon:hover {
-    fill:aliceblue;
-    stroke:#0000ff;
+    fill:Gold;
+    stroke:GoldenRod;
     stroke-width:1;
     opacity: 1;
 }
@@ -32,4 +32,11 @@ svg .date {
     stroke-width:1;
     stroke:#000000;
     kerning:1.2;
+}
+
+.bord {
+    border-radius: 25px;
+    border: 2px solid #999999 ;
+    padding: 20px;
+    width: 1040px;
 }
