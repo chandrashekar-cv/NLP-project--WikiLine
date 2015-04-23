@@ -29,7 +29,10 @@ $('#submit').click(function() {
 		return;
 	}
 	var category_id = $('#article_category').val();
-	d3.json("example.json", function(json) {
+	var json_name = article_id + "_" + category_id + ".json";
+	console.log(json_name);
+	json_name = "example.json";
+	d3.json(json_name, function(json) {
 
 		if (json === null) return; // parse problem, nothing to do here
 
@@ -54,9 +57,9 @@ $('#submit').click(function() {
 
 		json.events.forEach(function(p,i) {
 			//p.new = "try";
-			//Add image url's here
+			//Add image url's here //Still need to work on query!!!!!!!
 			$.ajax({
-  				url: "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=happy",
+  				url: "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=awesome",
   				dataType: 'json',
   				async: false,
   				type:'GET',xhrFields: {
@@ -64,9 +67,9 @@ $('#submit').click(function() {
   			},
   				success: function(data) {
 	    			p.img = data.responseData.results[0].url;
-	    			console.log(data.responseData.results[0].url);
-	    			console.log(p.img);
-	    			console.log(i);
+	    			//console.log(data.responseData.results[0].url);
+	    			//console.log(p.img);
+	    			//console.log(i);
   				}	
 				});
 
