@@ -55,6 +55,20 @@ $('#submit').click(function() {
 		json.events.forEach(function(p,i) {
 			//p.new = "try";
 			//Add image url's here
+			$.ajax({
+  				url: "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=happy",
+  				dataType: 'json',
+  				async: false,
+  				type:'GET',xhrFields: {
+    			withCredentials: true
+  			},
+  				success: function(data) {
+	    			p.img = data.responseData.results[0].url;
+	    			console.log(data.responseData.results[0].url);
+	    			console.log(p.img);
+	    			console.log(i);
+  				}	
+				});
 
 		});
 		// instantiate the chart
