@@ -12,8 +12,8 @@ from preprocess import *
 from utility import *
 
 #### CONSTANTS AND OPTIONS DEFINED HERE
-INPUT_FOLDER = "sample"
-MODEL_FOLDER = "complete_model"
+INPUT_FOLDER = "data"
+MODEL_FOLDER = "model"
 GLOBAL_MODEL_FILE = "global.pkl"
 
 TF_K_VALUE = 1
